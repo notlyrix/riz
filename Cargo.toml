@@ -1,0 +1,31 @@
+[workspace]
+resolver = "3"
+members = [
+    "riz",
+    "riz-core",
+    "riz-tui",
+    "riz-view",
+]
+
+[workspace.dependencies]
+monoio = "0.2"
+crop = "0.4"
+xutex = "0.1"
+sharded_ringbuf = "0.4"
+time = { version = "0.3", features = ["macros"] }
+# TODO: maybe add `zipora` for optimizations
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+strip = true
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+authors = ["Lyrix <notlyric@proton.me>"]
+categories = ["editor"]
+repository = "https://github.com/notlyrix/riz"
+homepage = "https://github.com/notlyrix/riz"
+license = "MIT"

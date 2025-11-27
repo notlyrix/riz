@@ -1,0 +1,6 @@
+enum_discrim_align_threshold = 10
+struct_field_align_threshold = 10
+
+group_imports = "StdExternalCrate"
+imports_granularity = "Crate"
+imports_layout = "HorizontalVertical"

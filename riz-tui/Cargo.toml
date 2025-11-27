@@ -1,0 +1,17 @@
+[package]
+name = "riz-tui"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+categories.workspace = true
+repository.workspace = true
+homepage.workspace = true
+license.workspace = true
+
+[dependencies]
+monoio.workspace = true
+riz-core = { path = "../riz-core" }
+
+# TODO: write own tui lib instead of `ratatui`
+ratatui = { version = "0.29", default-features = false, features = ["termion", "underline-color", "macros"] }
+termion = "4"
